@@ -1,10 +1,10 @@
 #!/bin/bash
 #title           :install-omada-controller.sh
 #description     :Omada Controller Installer for Ubuntu
-#supported       :Ubuntu 16.04, Ubuntu 18.04, Ubuntu 20.04
-#author          :monsn0
+#supported       :Ubuntu 16.04, Ubuntu 18.04, Ubuntu 20.04, Testing Ubuntu 22.04
+#author          :Original monsn0, Updated by northmendo
 #date            :2021-07-29
-#updated         :2022-09-14
+#updated         :2023-08-30
 
 # URL of latest available version of the Omada Controller package
 OmadaPackageUrl=https://static.tp-link.com/upload/software/2023/202303/20230321/Omada_SDN_Controller_v5.9.31_Linux_x64.deb
@@ -18,6 +18,8 @@ elif [[ $OS = *"Ubuntu 18.04"* ]]; then
     OsVer=bionic
 elif [[ $OS = *"Ubuntu 20.04"* ]]; then
     OsVer=focal
+elif [[ $OS = *"Ubuntu 22.04"* ]]; then
+    OsVer=jammy
 else
     echo -e "\e[1;31mERROR: Script only supports Ubuntu 16.04, 18.04 or 20.04! \e[0m"
     exit
